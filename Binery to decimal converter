@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class BinaryToDecimalConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a binary number: ");
+        String binaryInput = scanner.nextLine();
+
+        try {
+            // Converting binary to decimal using parseInt
+            int decimalOutput = Integer.parseInt(binaryInput, 2);
+
+            System.out.println("Decimal equivalent: " + decimalOutput);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid binary number. Please enter a valid binary number.");
+        }
+    }
+}
